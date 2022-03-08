@@ -1,5 +1,9 @@
 # 파이썬 코딩테스트 준비
 
+> 나동빈님의 이것이 취업을 위한 코딩 테스트다 with 파이썬을 보고 작성하는 문서입니다.
+>
+> [이것이 취업을 위한 코딩 테스트다 with 파이썬](https://www.youtube.com/watch?v=m-9pAwq1o3w&list=PLRx0vPvlEmdAghTr5mXQxGpHjWqSz0dgC)
+
 ## 자주 사용되는 표준 입력 방법
 
 - input() 함수는 한 줄의 문자열을 입력받는 함수
@@ -19,3 +23,19 @@ print() 함수
 - 각 변수를 콤마(,)를 이용하여 띄어쓰기로 구분하여 출력
 - print()는 기본적으로 출력 이후에 줄 바꿈 수행
     - 줄 바꿈을 원치 않는 경우 'end' 속성을 이용
+
+## 알고리즘 문제 해결 과정
+1. 지문 읽기 및 컴퓨터적 사고
+2. 요구사항(복잡도) 분석
+3. 문제 해결을 위한 아이디어 찾기
+4. 소스코드 설계 및 코딩
+
+## 수행 시간 측정 소스코드 예제
+```py
+import time
+start_time = time.time() # 측정 시작
+
+#프로그램 소스코드
+end_time = time.time() # 측정 종료
+print("time:", end_time - start_time) # 수행 시간 출력
+```
