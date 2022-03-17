@@ -1,29 +1,36 @@
+# > 4 5
+# >
+# > 00110
+# >
+# > 00011
+# >
+# > 11111
+# >
+# > 00000
+
 def dfs(x, y):
-    if x < 0 or x >= n or y < 0 or y >= m:
+    if x < 0 or x >= m or y < 0 or y >= n:
         return False
 
     if graph[x][y] == 0:
-        # graph[x][y] = 1
-        dfs(x - 1, y)
-        dfs(x + 1, y)
-        dfs(x, y - 1)
-        dfs(x, y + 1)
+        graph[x][y] = 1
+        dfs(x-1, y)
+        dfs(x+1, y)
+        dfs(x, y-1)
+        dfs(x, y+1)
         return True
     return False
 
 
-# N, M을 공백을 기준으로 구분하여 입력받기
-n, m = map(int, input().split())
-
-# 2차원 리스트의 맵 정보 입력 받기
+m, n = map(int, input().split())
 graph = []
-for i in range(n):
+for _ in range(m):
     graph.append(list(map(int, input())))
 
-result = 0
-for i in range(n):
-    for j in range(m):
+count = 0
+for i in range(m):
+    for j in range(n):
         if dfs(i, j) == True:
-            result += 1
+            count += 1
 
-print(result)
+print(count)
