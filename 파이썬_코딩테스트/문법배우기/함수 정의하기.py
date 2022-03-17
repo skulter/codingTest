@@ -3,9 +3,6 @@
 #     return 반환값
 
 # 더하기 함수 예시
-from re import A
-
-
 def add(a, b):
     return a + b
 
@@ -54,9 +51,9 @@ print(a)
 
 # 파이썬에서 함수는 여러 개의 반환 값을 가질 수 있다.
 def operator(a, b):
-    add_bar = a+b
-    subtract_var = a-b
-    multiply_var = a*b
+    add_bar = a + b
+    subtract_var = a - b
+    multiply_var = a * b
     divide_var = a / b
     return add_bar, subtract_var, multiply_var, divide_var
 
