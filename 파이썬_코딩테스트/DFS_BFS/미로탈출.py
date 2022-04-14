@@ -17,7 +17,6 @@ def bfs(x, y):
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-
             if nx < 0 or ny < 0 or nx >= n or ny >= m:
                 continue
             if graph[nx][ny] == 0:
