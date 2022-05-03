@@ -25,7 +25,6 @@ for i in target:
             answer.append('+')
             array.append(count)
 if isSuccess:
-    for i in answer:
-        print(i)
+        print("\n".join(answer))
 else:
     print('NO')
