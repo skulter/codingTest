@@ -1,4 +1,3 @@
-# 그리디 알고리즘
 # N = int(input())
 # count = 0
 
@@ -7,7 +6,6 @@
 #         count += N // 5;
 #         print(count)
 #         break
-
 #     N = N -3
 #     count += 1
 # else:
