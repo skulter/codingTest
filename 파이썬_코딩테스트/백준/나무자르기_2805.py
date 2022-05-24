@@ -1,5 +1,19 @@
 import sys
-# input = sys.stdin.readline
-# N, M = map(int,input().split())
-N, M = 5, 20
-trees = [4, 42, 40, 26, 46] 
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+trees = list(map(int, input().split()))
+start, end = 1, max(trees)
+
+while start <= end:
+    mid = (start + end) // 2
+    tempValue = 0
+    for i in trees:
+        if i >= mid:
+            tempValue += i - mid
+
+    if tempValue >= M:
+        start = mid + 1
+    else:
+        end = mid - 1
+print(end)
