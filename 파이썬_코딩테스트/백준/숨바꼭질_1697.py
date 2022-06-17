@@ -1,6 +1,20 @@
-n,m = map(int,input().split())
-dp=[0] * 100001
-dp[0] = 
-for 
-# 점화식
-# min(i-1,i+1, i*2)
+from collections import deque
+
+INF = int(1e6 + 1)
+n, k = map(int, input().split())
+dist = [0] * INF
+
+
+def bfs():
+    queue = deque([n])
+    while queue:
+        num = queue.popleft()
+        if num == k:
+            print(dist[num])
+        for i in (num - 1, num + 1, num * 2):
+            if i < INF and not dist[i]:
+                dist[i] = dist[num] + 1
+                queue.append(i)
+
+
+bfs()
