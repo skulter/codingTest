@@ -1,17 +1,18 @@
 import sys
 input = sys.stdin.readline
 
+now = int(100)
 N = int(input())
+M = int(input())
+notNums = map(int, input().split())
+allNums = list((range(0,10)))
+for i in notNums:
+    allNums.remove(i)
 
-graph  = [list(map(int,input().split())) for _ in range(N)]
+if N - 100 < 103 : 
 
-for k in range(N):
-    for i in range(N):
-        for j in range(N):
-            if graph[i][k] and graph[k][j] :
-                graph[i][j] = 1
+for i in str(N):
+    if allNums.count(int(i)):
+        
 
-for i in range(N):
-    for j in range(N):
-        print(graph[i][j], end = ' ')
-    print()
+print()
