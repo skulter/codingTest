@@ -1,11 +1,20 @@
-def num(m, n, x, y):
-    while x <= m * n:
-        if (x - y) % n == 0:
-            return x
-        x += m
-    return -1
+# 1
+# 5 3
+# 1 0 0 1 0
+# 0 1 0 0 1
+# 0 0 0 1 0
+# 0 0 0 0 0
+# 0 0 1 0 0
+import sys
+input = sys.stdin.readline
+ts = int(input())
+for _ in range(ts):
+    N, K = map(int, input().split())
+    minBoom = 1e9
+    graph = [list(map(int, input().split())) for i in range(N)]
+    result = []
 
-t = int(input())
-for i in range(t):
-    m, n, x, y = map(int, input().split())
-    print(num(m, n, x, y))
+    for y in range(N-K+1):
+        for x in range(N-K+1):
+            result.append(sum(sum([row[x:x+K] for row in graph[y:y+K]], [])))
+    print(minBoom)
